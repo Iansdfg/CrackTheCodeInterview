@@ -9,6 +9,7 @@ class Solution(object):
             for i in range(len(s)):
                 ans.append(s[i])
             return ans
+
         alp = 0
         res = []
         while alp < len(chars):
@@ -21,3 +22,14 @@ class Solution(object):
                 res += spit(str(cnt-alp))
             alp = cnt
         chars[:] = res
+        return ''.join(chars)
+
+
+def execute():
+    sol = Solution()
+    chars = ["a","a","a","a","a","b"]
+    print(sol.compress(chars))
+
+if __name__ == '__main__':
+    execute()
+
