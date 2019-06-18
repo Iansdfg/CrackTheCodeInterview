@@ -10,14 +10,13 @@ class Solution(object):
         for layer in xrange(n//2):
             first, last = layer, n-1-layer
             for i in xrange(first, last):
-                offset = i - first
+                dis = i - first
                 top = matrix[first][i]
-                matrix[first][i] = matrix[last-offset][first]
-                matrix[last-offset][first] = matrix[last][last-offset]
-                matrix[last][last-offset] = matrix[i][last]
+                matrix[first][i] = matrix[last-dis][first]
+                matrix[last-dis][first] = matrix[last][last-dis]
+                matrix[last][last-dis] = matrix[i][last]
                 matrix[i][last] = top
-        
-                
+            
                 
             
             
