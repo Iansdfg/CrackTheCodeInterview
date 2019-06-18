@@ -7,9 +7,9 @@ class Solution(object):
         if not matrix or not matrix[0]:
             return []
         n = len(matrix)
-        for layer in range(n//2):
+        for layer in xrange(n//2):
             first, last = layer, n-1-layer
-            for i in range(first, last):
+            for i in xrange(first, last):
                 offset = i - first
                 top = matrix[first][i]
                 matrix[first][i] = matrix[last-offset][first]
