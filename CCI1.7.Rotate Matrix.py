@@ -16,6 +16,15 @@ class Solution(object):
                 matrix[last-dis][first] = matrix[last][last-dis]
                 matrix[last][last-dis] = matrix[i][last]
                 matrix[i][last] = top
+#         if not matrix or not matrix[0]: return []
+#         n = len(matrix)
+#         for layer in range(n // 2):
+#             for col in range(n):
+#                 matrix[layer][col], matrix[n - 1 - layer][col] = matrix[n - 1 - layer][col], matrix[layer][col]
+#         print(matrix)
+#         for i in range(n):
+#             for j in range(i):
+#                 matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
             
                 
             
