@@ -10,13 +10,21 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        arr = []
-        curr = head
-        while curr:
-            if curr.val in arr:
-                prev.next = curr.next
+        current = head
+        while current and current.next:
+            if current.next.val == current.val: 
+                current.next = current.next.next
             else:
-                arr.append(curr.val)
-                prev = curr
-            curr = curr.next
-        return head
+                current = current.next
+        return head;
+            
+#         arr = []
+#         curr = head
+#         while curr:
+#             if curr.val in arr:
+#                 prev.next = curr.next
+#             else:
+#                 arr.append(curr.val)
+#                 prev = curr
+#             curr = curr.next
+#         return head
