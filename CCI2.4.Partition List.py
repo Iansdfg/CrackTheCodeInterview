@@ -11,18 +11,18 @@ class Solution(object):
         :type x: int
         :rtype: ListNode
         """
-        if not head: return head
         smallH = small = ListNode(0)
         bigH = big = ListNode(0)
         while head:
+            nextt = head.next
             if head.val<x:
-                nextt = ListNode(head.val)
-                small.next = nextt
-                small = small.next
+                small.next = head
+                small= small.next
             else:
-                nextt = ListNode(head.val)
-                big.next = nextt
-                big = big.next
-            head = head.next
+                big.next = head
+                big= big.next
+            head.next = None
+            head = nextt
         small.next = bigH.next
         return smallH.next
+        
