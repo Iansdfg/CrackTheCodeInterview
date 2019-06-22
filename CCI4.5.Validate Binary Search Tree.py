@@ -4,6 +4,20 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
+# class Solution(object):
+#     def isValidBST(self, root):
+#         """
+#         :type root: TreeNode
+#         :rtype: bool
+#         """
+#         return self.checkBST(root, float('-inf'), float('inf'))
+
+#     def checkBST(self, root, min, max):
+#         if not root:return True
+#         if root.val>=max or root.val<=min:
+#             return False
+#         return self.checkBST(root.left, min, root.val) and self.checkBST(root.right, root.val, max)
+        
 
 class Solution(object):
     def isValidBST(self, root):
