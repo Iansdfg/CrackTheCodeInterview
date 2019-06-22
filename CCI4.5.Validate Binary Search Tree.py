@@ -19,6 +19,7 @@
 #         return self.checkBST(root.left, min, root.val) and self.checkBST(root.right, root.val, max)
         
 
+        
 class Solution(object):
     def isValidBST(self, root):
         """
