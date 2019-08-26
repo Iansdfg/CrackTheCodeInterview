@@ -18,6 +18,8 @@ class Solution(object):
                 current = current.next
         return head;
             
+        
+        
 #         arr = []
 #         curr = head
 #         while curr:
