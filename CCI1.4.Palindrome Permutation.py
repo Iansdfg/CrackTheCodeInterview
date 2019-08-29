@@ -13,8 +13,6 @@ class Solution(object):
                     chars[char.lower()] = 1
         return len(chars) <= 1
 
-
-
 def execute():
     sol = Solution()
     s = 'Tact Coa'
