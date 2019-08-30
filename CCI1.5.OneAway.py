@@ -2,6 +2,7 @@
 class Solution(object):
     def OneAway (self, s1, s2):
         if s1 == s2: return True
+
         m, n = len(s1), len(s2)
         if abs(m - n) > 1: return False
         count, i, j = 0, 0, 0
@@ -47,7 +48,6 @@ def execute():
         ('pale', 'pkle', True),
         ('pkle', 'pable', False),
         ('pal', 'palks', False),
-        ('palks', 'pal', False)
     ]
     for [test_s1, test_s2, expected] in data:
         actual = sol.OneAway(test_s1, test_s2)
