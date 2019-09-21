@@ -4,6 +4,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+
         chars = dict()
         for char in s:
             if char.isalpha():
@@ -12,6 +13,7 @@ class Solution(object):
                 else:
                     chars[char.lower()] = 1
         return len(chars) <= 1
+
 
 def execute():
     sol = Solution()
