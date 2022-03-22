@@ -1,0 +1,50 @@
+from lintcode import (
+    ListNode,
+)
+
+"""
+Definition of ListNode:
+class ListNode(object):
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+"""
+
+class Solution:
+    """
+    @param head: ListNode head is the head of the linked list 
+    @param m: An integer
+    @param n: An integer
+    @return: The head of the reversed ListNode
+    """
+    def reverse_between(self, head, m, n):
+        # write your code here
+        curr = head 
+        cnt = 1
+        prev = dummy = ListNode(0)
+        dummy.next = head
+
+        while curr:
+            if cnt == m:
+                rever_head, rest_head = self.reverse(curr, n - m + 1)
+                prev.next = rever_head
+                while prev.next:
+                    prev = prev.next
+                prev.next = rest_head
+                return dummy.next
+            prev = curr
+            curr = curr.next
+            cnt += 1 
+        
+
+    def reverse(self, head, n): 
+        curr = head
+        prev = None 
+        for _ in range(n):
+            next_node = curr.next 
+            curr.next = prev
+            prev = curr 
+            curr = next_node
+        return prev, curr
+
+
